@@ -24,7 +24,7 @@ jobs:
 
       - name: execute py script # run tweet.py
         with:
-          API_KEY: ${{ secrets.API_KEY }}
+          api_key: ${{ secrets.API_KEY }}
 	  API_SECRET: ${{ secrets.API_SECRET }}
 	  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 	  ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
