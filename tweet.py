@@ -6,13 +6,13 @@ from random import randint
 
 load_dotenv()
 
-API_KEY = os.environ["API_KEY"]
+consumer = os.environ["consumer"]
 API_SECRET = os.getenv("API_SECRET")
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 ACCESS_TOKEN_SECRET = os.getenv("ACCESS_TOKEN_SECRET")
 
 client = tweepy.Client(
-    consumer_key=API_KEY,
+    consumer_key=consumer,
     consumer_secret=API_SECRET,
     access_token=ACCESS_TOKEN,
     access_token_secret=ACCESS_TOKEN_SECRET
