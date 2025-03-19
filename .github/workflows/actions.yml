@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script # run tweet.py
-      	with:
+        with:
           API_KEY: ${{ secrets.API_KEY }}
 	  API_SECRET: ${{ secrets.API_SECRET }}
 	  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
