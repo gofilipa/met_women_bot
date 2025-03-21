@@ -2,7 +2,7 @@ name: run tweet.py
 
 on:
   schedule:
-    - cron: '5 1 * * *'
+    - cron: '10 2 * * *'
 #    - cron: '0 0 * * *' # At 00:00 every day
 
 jobs:
