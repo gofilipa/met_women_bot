@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
 
@@ -37,7 +38,7 @@ jobs:
             ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
             CONSUMER_KEY: ${{ secrets.DQD_CONSUMER_KEY }}
             CONSUMER_SECRET: ${{ secrets.DQD_CONSUMER_SECRET }}
-       - run: |
+        run: |
           conda env update -f environment.yml
       
       - name: Run tweet.py
