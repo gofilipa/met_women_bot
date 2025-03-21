@@ -13,6 +13,8 @@ ACCESS_TOKEN_SECRET = os.getenv("ACCESS_TOKEN_SECRET")
 
 print(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
+print(f'printing os.environ:' os.environ)
+
 client = tweepy.Client(
     consumer_key=API_KEY,
     consumer_secret=API_SECRET,
