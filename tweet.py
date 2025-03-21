@@ -24,6 +24,8 @@ auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
+print('we loaded the auth variables')
+
 def tweet_women_fact(tweepy_client):
     print('fetching women from the MET...')
     r1 = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/search?q=woman")
