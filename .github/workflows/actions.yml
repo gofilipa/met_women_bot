@@ -35,7 +35,7 @@ jobs:
             CONSUMER_KEY: ${{ secrets.DQD_CONSUMER_KEY }}
             CONSUMER_SECRET: ${{ secrets.DQD_CONSUMER_SECRET }}
         run: |
-          conda env create  -f environment.yml
+          conda env update -f environment.yml
       
       - name: Run tweet.py
         run: |
