@@ -19,7 +19,7 @@ jobs:
       - name: setup anaconda
         uses: conda-incubator/setup-miniconda@v3
         with:
-          activate-environmest: met_women
+          activate-environment: met_women
           environment-file: environment.yml
           python-version: 3.13
           # condarc-file: etc/example-condarc.yml
