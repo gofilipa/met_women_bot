@@ -14,15 +14,17 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
 
-      - name: setup python
-        uses: actions/setup-python@v4
+      - name: setup anaconda
+      - uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: '3.13' # install the python version needed
-
-      - name: Install dependencies
-        run: |
-          # $CONDA is an environment variable pointing to the root of the miniconda directory
-          $CONDA/bin/conda env update --file environment.yml --name base          
+          activate-environmest: met_women
+          environment-file: environment.yml
+          python-version: 3.13
+          # condarc-file: etc/example-condarc.yml
+          auto-activate-base: false
+      - run: |
+          conda info
+          conda list
 
       - name: executing python script
         env:
