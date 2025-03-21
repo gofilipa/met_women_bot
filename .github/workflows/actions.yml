@@ -27,6 +27,6 @@ jobs:
             ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
             CONSUMER_KEY: ${{ secrets.DQD_CONSUMER_KEY }}
             CONSUMER_SECRET: ${{ secrets.DQD_CONSUMER_SECRET }}
-        run: python main.py
+        run: python tweet.py
 
 
