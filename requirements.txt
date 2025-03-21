@@ -1,20 +1,9 @@
-blinker @ file:///home/conda/feedstock_root/build_artifacts/blinker_1731096409132/work
-Brotli @ file:///Users/runner/miniforge3/conda-bld/brotli-split_1725267563793/work
-certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1739515848642/work/certifi
-cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1725560577695/work
-charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1735929714516/work
-cryptography @ file:///Users/runner/miniforge3/conda-bld/cryptography-split_1740893593373/work
-h2 @ file:///home/conda/feedstock_root/build_artifacts/h2_1738578511449/work
-hpack @ file:///home/conda/feedstock_root/build_artifacts/hpack_1737618293087/work
-hyperframe @ file:///home/conda/feedstock_root/build_artifacts/hyperframe_1737618333194/work
-idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1733211830134/work
-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/oauthlib_1733752848439/work
-pycparser @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pycparser_1733195786/work
-PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1732782409051/work
-PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1733217236728/work
-python-dotenv @ file:///home/conda/feedstock_root/build_artifacts/python-dotenv_1733243180666/work
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1733217035951/work
-requests-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/requests-oauthlib_1733772243268/work
-tweepy @ file:///home/conda/feedstock_root/build_artifacts/tweepy_1737012975245/work
-urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1734859416348/work
-zstandard==0.23.0
+certifi==2025.1.31
+charset-normalizer==3.4.1
+idna==3.10
+oauthlib==3.2.2
+python-dotenv==1.0.1
+requests==2.32.3
+requests-oauthlib==2.0.0
+tweepy==4.15.0
+urllib3==2.3.0
