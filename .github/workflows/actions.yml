@@ -38,7 +38,7 @@ jobs:
           conda env create  -f environment.yml
           # conda env update -n met_women --file environment.yml
           # conda env update --file environment.yml --name met_women
-          # conda activate met_women
+          conda activate met_women
           python tweet.py
 
 
