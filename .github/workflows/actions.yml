@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          conda env update --file environment.yml --name base
+          conda env update --file environment.yml --name met_women
 
       - run: |
           conda info
