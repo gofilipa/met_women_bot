@@ -36,6 +36,7 @@ jobs:
             CONSUMER_SECRET: ${{ secrets.DQD_CONSUMER_SECRET }}
         run: |
           conda env update --file environment.yml --name met_women
+          conda activate met_women
           python tweet.py
 
 
