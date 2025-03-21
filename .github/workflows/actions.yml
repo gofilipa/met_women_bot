@@ -43,6 +43,7 @@ jobs:
             CONSUMER_KEY: ${{ secrets.DQD_CONSUMER_KEY }}
             CONSUMER_SECRET: ${{ secrets.DQD_CONSUMER_SECRET }}
         run: |
+          conda init
           conda activate met_women
           python tweet.py
 
