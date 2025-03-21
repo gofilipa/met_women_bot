@@ -22,9 +22,9 @@ client = tweepy.Client(
     access_token_secret=ACCESS_TOKEN_SECRET
 )
 
-# auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
-# auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-# api = tweepy.API(auth)
+auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+api = tweepy.API(auth)
 
 print('we loaded the auth variables')
 
@@ -54,21 +54,21 @@ def tweet_women_fact(tweepy_client):
     else:
         gender = 'Gender: Unknown'
 
-#    image_url = parsed['primaryImage']
+    image_url = parsed['primaryImage']
  
-#    img = requests.get(image_url)
-#    img_content = img.content
-#    with open('image.jpg', 'wb') as handler:
-#        handler.write(img_content)
+    img = requests.get(image_url)
+    img_content = img.content
+    with open('image.jpg', 'wb') as handler:
+        handler.write(img_content)
    
-#    media = api.media_upload(filename='image.jpg')
-#    media_id = media.media_id
+    media = api.media_upload(filename='image.jpg')
+    media_id = media.media_id
 
-    tweet_text = f"{title}, {artist}, {gender}, {parsed['objectURL']}"
+    tweet_text = f"{title}, {artist}, {gender}"
     print('tweeting women from the MET...')
 
-    # tweepy_client.create_tweet(text=tweet_text, media_ids=[media_id])
-    tweepy_client.create_tweet(text=tweet_text)
+    tweepy_client.create_tweet(text=tweet_text, media_ids=[media_id])
+    # tweepy_client.create_tweet(text=tweet_text)
     
 
 tweet_women_fact(client)
