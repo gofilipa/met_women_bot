@@ -35,6 +35,7 @@ def tweet_women_fact(tweepy_client):
     parsed = r1.json()
     
     number = randint(1, 100)
+
     obj_id = parsed['objectIDs'][number]
 
     r2 = requests.get(f"https://collectionapi.metmuseum.org/public/collection/v1/objects/{obj_id}")
@@ -45,14 +46,18 @@ def tweet_women_fact(tweepy_client):
        title = f"Title: {parsed['title']}"
     else:
         title = f"Title: Unknown"
+
     if parsed['artistDisplayName'] != '':
        artist = f"Artist: {parsed['artistDisplayName']}"
     else:
        artist = 'Artist: Unknown'
+
     if parsed['artistGender'] != '':
         gender = parsed['artistGender']
     else:
         gender = 'Gender: Unknown'
+
+    url = parsed['objectURL']
 
     image_url = parsed['primaryImage']
  
@@ -64,7 +69,7 @@ def tweet_women_fact(tweepy_client):
     media = api.media_upload(filename='image.jpg')
     media_id = media.media_id
 
-    tweet_text = f"{title}, {artist}, {gender}"
+    tweet_text = f"{title}, {artist}, {gender}, see more: {url}"
     print('tweeting women from the MET...')
 
     tweepy_client.create_tweet(text=tweet_text, media_ids=[media_id])
