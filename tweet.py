@@ -34,7 +34,7 @@ def tweet_women_fact(tweepy_client):
     
     parsed = r1.json()
     
-    number = randint(1, 100)
+    number = randint(1, 6000)
 
     obj_id = parsed['objectIDs'][number]
 
@@ -55,7 +55,7 @@ def tweet_women_fact(tweepy_client):
     if parsed['artistGender'] != '':
         gender = parsed['artistGender']
     else:
-        gender = 'Gender: Unknown'
+        gender = 'Artist Gender: Unknown'
 
     url = parsed['objectURL']
 
@@ -69,7 +69,7 @@ def tweet_women_fact(tweepy_client):
     media = api.media_upload(filename='image.jpg')
     media_id = media.media_id
 
-    tweet_text = f"{title}, {artist}, {gender}, see more: {url}"
+    tweet_text = f"{title}, {artist}, {gender}, go to artwork: git {url}"
     print('tweeting women from the MET...')
 
     tweepy_client.create_tweet(text=tweet_text, media_ids=[media_id])
