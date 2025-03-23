@@ -2,8 +2,8 @@ name: run tweet.py
 
 on:
   schedule:
-    - cron: '0 * * * *' # at top of every hour
-#    - cron: '0 0 * * *' # At 00:00 every day
+#    - cron: '0 * * * *' # at top of every hour
+    - cron: '0 0 * * *' # At 00:00 every day
   
   push: 
 
